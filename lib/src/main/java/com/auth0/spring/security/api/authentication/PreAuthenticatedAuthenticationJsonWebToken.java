@@ -20,7 +20,7 @@ public class PreAuthenticatedAuthenticationJsonWebToken implements Authenticatio
 
     private final DecodedJWT token;
 
-    PreAuthenticatedAuthenticationJsonWebToken(DecodedJWT token) {
+    public PreAuthenticatedAuthenticationJsonWebToken(DecodedJWT token) {
         this.token = token;
     }
 

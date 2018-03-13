@@ -17,7 +17,7 @@ public class AuthenticationJsonWebToken implements Authentication, JwtAuthentica
     private final DecodedJWT decoded;
     private boolean authenticated;
 
-    AuthenticationJsonWebToken(String token, JWTVerifier verifier) throws JWTVerificationException {
+    public AuthenticationJsonWebToken(String token, JWTVerifier verifier) throws JWTVerificationException {
         this.decoded = verifier == null ? JWT.decode(token) : verifier.verify(token);
         this.authenticated = verifier != null;
     }
